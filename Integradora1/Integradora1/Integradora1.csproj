@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07E8F476-BC6A-41C0-A56A-D255EF36FEC0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Integradora1</RootNamespace>
+    <AssemblyName>Integradora1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeLib, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f09bda868cc39e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.1.3.0.0\lib\net20\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Carbon.Data.Protection, Version=0.19.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carbon.Data.Protection.0.19.1\lib\netstandard2.0\Carbon.Data.Protection.dll</HintPath>
+    </Reference>
+    <Reference Include="Carbon.Json, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carbon.Json.1.7.0\lib\netstandard2.0\Carbon.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Carbon.Packaging, Version=1.27.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carbon.Packaging.1.27.2\lib\netstandard2.0\Carbon.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Carbon.Storage, Version=1.15.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carbon.Storage.1.15.1\lib\netstandard2.0\Carbon.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Carbon.VersionControl, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carbon.VersionControl.1.8.1\lib\netstandard2.0\Carbon.VersionControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Carbon.Versioning, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carbon.Versioning.1.5.0\lib\netstandard2.0\Carbon.Versioning.dll</HintPath>
+    </Reference>
+    <Reference Include="GitHub, Version=1.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GitHub.1.12.1\lib\netstandard2.0\GitHub.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>E:\Desarrollo\itextsharp-dll-pdfa\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>E:\Desarrollo\itextsharp-dll-pdfa\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>E:\Desarrollo\itextsharp-dll-pdfa\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="LibPrintTicket">
+      <HintPath>E:\Desarrollo\LibPrintTicket.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>E:\Desarrollo\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Desarrollo\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.5.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatosBtn.cs" />
+    <Compile Include="MysqlProducto.cs" />
+    <Compile Include="Producto.cs" />
+    <Compile Include="Ticket.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="MysqlUsuario.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerente.Designer.cs">
+      <DependentUpon>Gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operador.Designer.cs">
+      <DependentUpon>Operador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validaciones.cs" />
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerente.resx">
+      <DependentUpon>Gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operador.resx">
+      <DependentUpon>Operador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486564400-account_81513.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Beer-icon_30353.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product-sale-report_25407.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_icon-icons.com_66546.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edition_theuser_theapplication_2909.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removetheuser_elimina_3541.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adduser_añadir_3553.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conference_3548.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edition_theproperty_3623.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer_4036.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_icon-icons.com_665461.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAgregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_shop_online_ecommerce_shopping-8_icon-icons.com_61649.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_shop_online_ecommerce_shopping-9_icon-icons.com_61652.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode_shop_online_ecommerce_shopping-1_icon-icons.com_61653.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\broom_38542.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sql.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Csv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\csv1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txt1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sql1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hot-Dog-icon_30324.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_36124233-stock-illustration-vector-close-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sencillo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doble wini.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChileDoggosss.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doggomomiiaaaa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Momiassss.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pf_1523810934.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pf_1523811261.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pf_1523811711.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horchata1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limonada1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-format-list-bulleted_90411.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6944303086_72362fa863.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chiledogggo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asdwascwcsc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-color_contacts_icon-icons.com_53460.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pf_15238109341.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_removewaste_departure_action_delet_10837.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-color_payment_icon-icons.com_53442 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pf_1523893888.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sprite1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limonada11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horchata11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
