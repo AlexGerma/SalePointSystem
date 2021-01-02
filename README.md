@@ -1,3 +1,13 @@
-# Punto de venta
+# Sale Point System
+- Developed with C #
 
-Punto de venta con inventario, cortes de caja, contro de usuarios y reportes.
+### Features:
+- Reports
+- Inventory
+- Authentication login
+- User manager
+- Adminitrative panel
+- Special funcions with keyboard macros
+
+# DataBase:
+- Mysql
